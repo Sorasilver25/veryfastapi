@@ -51,7 +51,7 @@ def delete_customer(customer_id: int, db: Session = Depends(get_db)):
 client = TestClient(app)
 
 def test_read_main():
-    response = client.get("/")
+    response = client.get("/customers/")
     assert response.status_code == 200
 
 # on test si il y a une commande avec un article id 1
